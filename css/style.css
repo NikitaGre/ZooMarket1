@@ -1,0 +1,336 @@
+/* Ваш існуючий CSS-код */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #33CC33; /* Bright green as seen in screenshots */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    background-color: #2F7C2F; /* Darker green */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #33CC33; /* Bright green background for logo */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+    margin-right: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of nav items */
+}
+
+.nav li {
+    margin-left: 10px;
+}
+
+.nav-button {
+    background-color: #33CC33; /* Bright green for nav buttons */
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block; /* Make the whole button clickable area */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover,
+.nav-button.active {
+    background-color: #33CC33; /* Slightly darker green on hover/active */
+    cursor: pointer;
+}
+
+/* Main Content Styles */
+main {
+    flex-grow: 1; /* Allow main content to take available space */
+    padding: 20px;
+    display: flex; /* Use flexbox to manage page sections */
+    flex-direction: column; /* Stack sections vertically */
+}
+
+.page-section {
+    display: none; /* Hide all sections by default */
+    padding-bottom: 20px; /* To prevent content from touching footer */
+}
+
+.page-section.active-page {
+    display: block; /* Show active section */
+}
+
+.intro-section {
+    background-color: #ffffff; /* White background */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for image and text */
+    gap: 20px; /* Space between image and text */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.intro-image-container {
+    flex-shrink: 0; /* Don't shrink the image container */
+    width: 250px; /* Fixed width as seen in screenshot */
+    height: 150px;
+    overflow: hidden; /* Hide overflow if image is larger */
+    border-radius: 8px;
+}
+
+.intro-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-radius: 8px;
+}
+
+.intro-text-container {
+    flex-grow: 1; /* Allow text to take remaining space */
+}
+
+.intro-text-container h3 {
+    margin-top: 0;
+    color: #2F7C2F; /* Dark green for heading */
+}
+
+.page-title {
+    background-color: #ffffff; /* White background for page titles */
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    color: #2F7C2F; /* Dark green for title text */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.tovar {
+    background-color: #ffffff; /* White background for cards */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black; /* Ensure text is visible */
+}
+
+.tovar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circular images */
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #33CC33; /* Green border around images */
+}
+
+.tovar h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #2F7C2F; /* Dark green for card titles */
+    font-size: 1.2em;
+}
+
+.tovar p {
+    margin: 3px 0;
+    font-size: 0.9em;
+}
+
+.tovar h5 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #2F7C2F;
+}
+
+.buy-button {
+    background-color: #33CC33; /* Bright green button */
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #4CAF50;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #33CC33; /* Bright green for footer */
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    display: flex; /* Use flexbox for footer buttons */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    gap: 15px; /* Space between buttons */
+}
+
+.footer-buttons {
+    display: none; /* Hide all footer button groups by default */
+    width: 100%; /* Take full width to center buttons within */
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-buttons.active-footer {
+    display: flex; /* Show active footer button group */
+}
+
+.footer-button {
+    background-color: #FFF; /* White background for footer buttons */
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* Allow buttons to grow */
+    max-width: 45%; /* Limit width for two-column layout */
+    min-width: 200px; /* Minimum width for buttons */
+}
+
+.footer-button-full-width {
+    background-color: #FFF;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.footer-button:hover,
+.footer-button-full-width:hover {
+    background-color: #eee;
+}
+
+.buy-button-link {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 500px;
+}
+
+.buy-button-link:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav li {
+        margin: 5px 0;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .footer-button,
+    .footer-button-full-width {
+        max-width: 100%; /* Full width for footer buttons on small screens */
+    }
+}
+
+.tovar:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.video-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+}
+
+.video-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.video-section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #33CC33;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.video-section a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
